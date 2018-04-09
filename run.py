@@ -1,3 +1,5 @@
+#运行环境要求: Python3
+
 import urllib
 import urllib.parse
 import urllib.request
@@ -21,7 +23,7 @@ CaptchaUrl = "http://202.118.201.228/academic/getCaptcha.do"
 picture = opener.open(CaptchaUrl).read()
 #将图片存入指定位置
 if platform.system() == "Windows":
-    path = r"C:\HRBUST"
+    path = r"C:\HRBUST\"
     if (os.path.exists(path)==False):
         os.mkdir(path)
     imgpath = r'C:\HRBUST\image.jpg'
