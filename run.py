@@ -19,7 +19,7 @@ cookie = http.cookiejar.CookieJar()
 handler = urllib.request.HTTPCookieProcessor(cookie)
 opener = urllib.request.build_opener(handler)
 #先获取cookies
-CaptchaUrl = "http://202.118.201.228/academic/getCaptcha.do"
+CaptchaUrl = "http://jwzx.hrbust.edu.cn/academic/getCaptcha.do"
 picture = opener.open(CaptchaUrl).read()
 #将图片存入指定位置
 if platform.system() == "Windows":
@@ -64,7 +64,7 @@ postdata2=urllib.parse.urlencode({
 }).encode(encoding='UTF8')
 #登陆请求
 req = urllib.request.Request(
-    url = 'http://202.118.201.228/academic/j_acegi_security_check', 
+    url = 'http://jwzx.hrbust.edu.cn/academic/j_acegi_security_check', 
     data = postdata
 )
 
@@ -78,7 +78,7 @@ for item in cookie:
 
 #选课请求
 req2 = urllib.request.Request(
-    url = 'http://202.118.201.228/academic/manager/electcourse/scaddaction.do',
+    url = 'http://jwzx.hrbust.edu.cn/academic/manager/electcourse/scaddaction.do',
     data = postdata2
 )
 
